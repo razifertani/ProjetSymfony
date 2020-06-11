@@ -21,7 +21,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home
+                            <a class="nav-link" href="/">Home
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
@@ -29,10 +29,10 @@
                             <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
+                            <a class="nav-link" href="/profile">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/login">Login</a>
+                            <a class="nav-link" href="/login">Login/Register</a>
                         </li>
                     </ul>
                 </div>
@@ -43,6 +43,10 @@
         <header class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1076');">
             <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
         </header>
+
+        <div>
+            {{ render(controller('AppBundle:User:connected')) }}
+        </div>
 
         {% block body %}{% endblock %}
 

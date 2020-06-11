@@ -25,6 +25,13 @@ class User extends BaseUser
      */
     protected $name;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="phone", type="integer")
+     */
+    protected $phone;
+
     public function __construct()
     {
         parent::__construct();
@@ -55,4 +62,22 @@ class User extends BaseUser
     {
         return $this->name;
     }
+
+    /**
+     * @return int
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * @param int $phone
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+    }
+
+
 }
